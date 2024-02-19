@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator App | Created By Dheeraj</title>
+
+    <!-- StyleSheet Link -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- FontAwesome Link -->
+    <script src="https://kit.fontawesome.com/a656fffa44.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="app-body-contain">
+                <div class="body-head">age calculator</div>
+                <div class="card-contain">
+                    <div class="input-contain">
+                        <div class="input-bx">
+                            <label for="day">day:</label>
+                            <input type="number" id="dayInput" min="1" max="31" placeholder="Date">
+                        </div>
+                        <div class="input-bx">
+                            <label for="month">month:</label>
+                            <input type="number" id="monthInput" min="1" max="12" placeholder="Month">
+                        </div>
+                        <div class="input-bx">
+                            <label for="year">year:</label>
+                            <input type="number" id="yearInput" min="1900" max="2024" placeholder="Year">
+                        </div>
+                    </div>
+                    <!-- <span class="errorSpan" id="inputError">value must be valid:</span> -->
+                    <div class="btn-contain">
+                        <button class="calculateBtn" id="calculateAge">get</button>
+                    </div>
+                    <div class="result-contain">
+                        <div class="resultVal"><span id="yearResult">- -</span> Years</div>
+                        <div class="resultVal"><span id="monthResult">- -</span> Months</div>
+                        <div class="resultVal"><span id="dayResult">- -</span> Days</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fade" id="fadeBg"></div>
+            <div class="errorContain" id="errorAlert">
+                <div class="error-icon"><img src="assets/images/error-icon.gif"></div>
+                <div class="errorInfo" id="inputError"></div>
+                
+                <div class="closeError" id="closeAlert">X</div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+
+</body>
+</html>

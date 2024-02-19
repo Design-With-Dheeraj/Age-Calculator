@@ -1,0 +1,65 @@
+@media screen and (max-width: 550px) {
+    .container
+    {
+        padding: 20px;
+        height: 100%;
+    }
+
+    .container .app-body-contain .body-head
+    {
+        font: bold 84px "this-appeal";
+    }
+
+    .app-body-contain .card-contain
+    {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .card-contain .input-contain
+    {
+        flex-direction: column;
+        gap: 10px 0;
+    }
+
+    .input-contain .input-bx
+    {
+        width: 80%;
+    }
+
+    .card-contain .result-contain
+    {
+        font: 500 30px "spacebook";
+        line-height: 50px;
+    }
+
+    .btn-contain{
+        margin: 20px 0;
+    }
+    
+    .btn-contain .calculateBtn
+    {
+        width: 120px;
+        font: 14px "spacebook";
+    }
+
+    .card-contain .calculateBtn::before{
+        left: -60px;
+        width: 60px;
+    }
+    .card-contain .calculateBtn::after{
+        left: -62px;
+    }
+
+    .errorContain
+    {
+        width: 90%;
+    }
+
+    .closeError{
+        left: 50%;
+        top: 55px;
+        transform: translateX(-50%);
+        box-shadow: -4px -4px 10px rgba(100, 100, 100, 0.3);
+    }
+}

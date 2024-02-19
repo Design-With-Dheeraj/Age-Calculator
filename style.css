@@ -1,0 +1,284 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-Bg: rgb(255, 252, 246);
+    --page-headColor: #7209b7;
+    --card-bgColor: #fff;
+}
+
+
+@font-face {
+    font-family: "spacebook";
+    src: url(assets/font/spacebook-font/spacebook-3lonp.ttf);
+}
+
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+    background: var(--primary-Bg);
+}
+
+.container
+{
+    max-width: 1440px;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    background: url(assets/images/Waimakariri.png) center no-repeat rgba(255, 252, 246, 0.6);
+    background-blend-mode: screen;
+    background-size: cover;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.container .app-body-contain .body-contain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .app-body-contain .body-head
+{
+    font: 50px "spacebook";
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+    color: var(--page-headColor);
+}
+
+.app-body-contain .card-contain
+{
+    width: 480px;
+    height: auto;
+
+    padding: 30px 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 5px 5px 20px rgba(150, 150, 150, 0.4);
+}
+
+.card-contain .input-contain
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 0 10px;
+    margin-bottom: 6px;
+}
+
+.input-contain label
+{
+    font: lighter 12px "spacebook";
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.input-contain input
+{
+    width: 100%;
+    padding: 6px 8px;
+    margin-top: 2px;
+    
+    border-radius: 6px;
+    border: none;
+    box-shadow: 2px 2px 6px rgba(100, 100, 100, 0.4);
+    font: 24px "spacebook";
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.input-contain input::placeholder
+{
+    opacity: 0.2;
+    font-size: 16px;
+    transform: translateY(-5px);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+
+
+
+
+
+
+
+.fade{
+    position: absolute;
+    inset: 0;
+    background: rgba(100, 100, 100, 0.8);
+    display: none;
+}
+
+.errorContain
+{
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    transform: translateX(-50%) scale(0.2);
+
+    border-radius: 6px;
+    padding: 10px;
+    width: 300px;
+    height: auto;
+
+    background-color: #fff;
+    z-index: 9;
+
+    display: flex;
+    align-items: center;
+    transition: 0.5s, opacity 300ms ease-in;
+}
+
+.closeError
+{
+    position: absolute;
+    right: -20px;
+    top: -20px;
+
+    width: 40px;
+    height: 40px;
+    
+
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: -4px 4px 8px rgba(100, 100, 100, 0.3);
+
+    font: 18px "spacebook";
+    text-align: center;
+    line-height: 40px;
+
+    cursor: pointer;
+}
+
+.error-icon img
+{
+    width: 40px;
+    height: auto;
+}
+
+.errorInfo
+{
+    margin-left: 10px;
+    font: 14px "spacebook";
+}
+
+.errorInfo span
+{
+    color: #7209b7;
+}
+
+.errorShow
+{
+    top: 10%;
+    transform: translateX(-50%) scale(1);
+}
+
+.btn-contain{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.btn-contain .calculateBtn
+{
+    width: 140px;
+    height: auto;
+    padding: 6px 0;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 6px;
+    border: 2px solid #000;
+    background: transparent;
+    color: #000;
+    font: 16px "spacebook";
+
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+.card-contain .calculateBtn::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 2px;
+    background: #000;
+}
+.card-contain .calculateBtn::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -102px;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.card-contain .calculateBtn:hover
+{
+    background: #000;
+    color: var(--card-bgColor);
+}
+.card-contain .calculateBtn:focus
+{
+    background: #000;
+    color: var(--card-bgColor);
+}
+
+.card-contain .calculateBtn .fa-carrot
+{
+    transition: 0.3s;
+}
+
+.card-contain .calculateBtn:hover .fa-carrot
+{
+    transform: rotate(45deg);
+}
+
+.card-contain .result-contain
+{
+    font: 500 38px "spacebook";
+    line-height: 64px;
+}
+
+.result-contain .resultVal span
+{
+    color: var(--page-headColor);
+    margin-right: 10px;
+}
+
